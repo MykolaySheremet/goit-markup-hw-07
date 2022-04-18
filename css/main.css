@@ -95,6 +95,11 @@ address {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.social-links:hover .svg-links,
+.social-links:focus .svg-links {
+  fill: var(--third-color-text);
+}
+
 .social-links {
   display: flex;
   align-items: center;
@@ -107,11 +112,6 @@ address {
 
 .social-links:hover, .social-links:focus {
   background-color: var(--accent-color);
-}
-
-.social-links:hover .svg-links,
-.social-links:focus .svg-links {
-  fill: var(--third-color-text);
 }
 
 .logo {
@@ -147,6 +147,13 @@ address {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.9);
 }
 
 .modalwindow {
@@ -186,13 +193,6 @@ address {
   fill: var(--accent-color);
 }
 
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transform: scale(0.9);
-}
-
 .name-modal-form {
   font-weight: 700;
   font-size: 20px;
@@ -214,6 +214,11 @@ address {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.contact-modalwindow-input:hover, .contact-modalwindow-input:focus {
+  outline: none;
+  border: solid 1px var(--accent-color);
+}
+
 .textarea-modalwindow {
   width: 100%;
   height: 120px;
@@ -230,8 +235,7 @@ address {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-textarea:hover.textarea-modalwindow,
-textarea:focus.textarea-modalwindow {
+.textarea-modalwindow:hover, .textarea-modalwindow:focus {
   outline: none;
   border: solid 1px var(--accent-color);
 }
@@ -252,14 +256,13 @@ textarea:focus.textarea-modalwindow {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btn-modal-wind:hover, .btn-modal-wind:focus {
+  background-color: #188CE8;
+}
+
 .box-button-mod {
   display: flex;
   justify-content: center;
-}
-
-.btn-modal-wind:hover,
-.btn-modal-wind:focus {
-  background-color: #188CE8;
 }
 
 .input-svg-contact {
@@ -279,12 +282,6 @@ textarea:focus.textarea-modalwindow {
 input:focus + .svg-form-modalwindow,
 input:hover + .svg-form-modalwindow {
   fill: var(--accent-color);
-}
-
-input:hover.contact-modalwindow-input,
-input:focus.contact-modalwindow-input {
-  outline: none;
-  border: solid 1px var(--accent-color);
 }
 
 .label-modal-contact {
@@ -311,6 +308,18 @@ input:focus.contact-modalwindow-input {
   outline: none;
 }
 
+.agriment-text-label::before {
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+  border: solid 2px var(--main-color-text);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .checbox-modalwindow:checked + .agriment-text-label::before {
   background-color: var(--accent-color);
   border: solid 1px var(--accent-color);
@@ -325,25 +334,6 @@ input:focus.contact-modalwindow-input {
 
 .link-agriment {
   color: var(--accent-color);
-}
-
-.agriment-text-label::before {
-  display: inline-block;
-  content: "";
-  width: 15px;
-  height: 15px;
-  margin-right: 9px;
-  border: solid 2px var(--main-color-text);
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input:checked + .icon-checkbox {
-  background-color: var(--accent-color);
-  border: solid 2px var(--accent-color);
-  background-image: url(../images/svg/full-check.svg);
-  background-size: contain;
-  background-origin: border-box;
 }
 
 .signform {
@@ -441,6 +431,11 @@ input:checked + .icon-checkbox {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.nav-contact:hover .mail-tel-svg,
+.nav-contact:focus .mail-tel-svg {
+  fill: var(--accent-color);
+}
+
 .active-page {
   color: var(--accent-color);
 }
@@ -455,8 +450,7 @@ input:checked + .icon-checkbox {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list:hover,
-.nav-list:focus {
+.nav-list:hover, .nav-list:focus {
   color: var(--accent-color);
 }
 
@@ -487,14 +481,8 @@ input:checked + .icon-checkbox {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-contact:hover,
-.nav-contact:focus {
+.nav-contact:hover, .nav-contact:focus {
   color: var(--accent-color);
-}
-
-.nav-contact:hover .mail-tel-svg,
-.nav-contact:focus .mail-tel-svg {
-  fill: var(--accent-color);
 }
 
 .hero-section {
@@ -526,8 +514,7 @@ input:checked + .icon-checkbox {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.main-button:hover,
-.main-button:focus {
+.main-button:hover, .main-button:focus {
   background-color: #188CE8;
 }
 
@@ -672,6 +659,10 @@ input:checked + .icon-checkbox {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.clients-link:focus, .clients-link:hover {
+  border-color: var(--accent-color);
+}
+
 .icon-clients {
   fill: var(--icon-colors);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -680,11 +671,6 @@ input:checked + .icon-checkbox {
 .clients-link:hover .icon-clients,
 .clients-link:focus .icon-clients {
   fill: var(--accent-color);
-}
-
-.clients-link:focus,
-.clients-link:hover {
-  border-color: var(--accent-color);
 }
 
 .list-clients {
@@ -710,6 +696,10 @@ input:checked + .icon-checkbox {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.nav-contact-foot:hover, .nav-contact-foot:focus {
+  color: var(--accent-color);
+}
+
 .addressfoot {
   font-family: 400;
   font-size: 14px;
@@ -719,10 +709,7 @@ input:checked + .icon-checkbox {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.addressfoot:hover,
-.addressfoot:focus,
-.nav-contact-foot:hover,
-.nav-contact-foot:focus {
+.addressfoot:hover, .addressfoot:focus {
   color: var(--accent-color);
 }
 
@@ -807,8 +794,7 @@ input:checked + .icon-checkbox {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-port:hover,
-.button-port:focus {
+.button-port:hover, .button-port:focus {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 3px 1px rgba(0, 0, 0, 0.1);
   color: var(--third-color-text);
   background-color: var(--accent-color);
@@ -848,8 +834,7 @@ input:checked + .icon-checkbox {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-links-card:hover,
-.portfolio-links-card:focus {
+.portfolio-links-card:hover, .portfolio-links-card:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06), 0 1px 1px rgba(0, 0, 0, 0.12);
 }
 

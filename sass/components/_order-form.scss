@@ -17,6 +17,12 @@
     border-radius: 4px;
     cursor: pointer;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border: solid 1px var(--accent-color);
+    }
 }
 
 .textarea-modalwindow {
@@ -33,12 +39,12 @@
     resize: none;
     cursor: pointer;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-textarea:hover.textarea-modalwindow,
-textarea:focus.textarea-modalwindow {
-    outline: none;
-    border: solid 1px var(--accent-color);
+    &:hover,
+    &:focus {
+        outline: none;
+        border: solid 1px var(--accent-color);
+    }
 }
 
 .btn-modal-wind {
@@ -55,16 +61,16 @@ textarea:focus.textarea-modalwindow {
     border: none;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: #188CE8;
+    }
 }
 
 .box-button-mod {
     display: flex;
     justify-content: center;
-}
-
-.btn-modal-wind:hover,
-.btn-modal-wind:focus {
-    background-color: #188CE8;
 }
 
 .input-svg-contact {
@@ -79,17 +85,11 @@ textarea:focus.textarea-modalwindow {
     transform: translateY(-50%);
     fill: var(--main-color-text);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-input:focus+.svg-form-modalwindow,
-input:hover+.svg-form-modalwindow {
-    fill: var(--accent-color);
-}
-
-input:hover.contact-modalwindow-input,
-input:focus.contact-modalwindow-input {
-    outline: none;
-    border: solid 1px var(--accent-color);
+    input:focus + &,
+    input:hover + & {
+        fill: var(--accent-color);
+    }
 }
 
 .label-modal-contact {
@@ -114,40 +114,32 @@ input:focus.contact-modalwindow-input {
     letter-spacing: 0.03em;
     color: var(--second-color-text);
     outline: none;
-}
 
-.checbox-modalwindow:checked+.agriment-text-label::before {
-    background-color: var(--accent-color);
-    border: solid 1px var(--accent-color);
-    background-image: url(../images/svg/full-check.svg);
-    background-size: contain;
-    background-origin: border-box;
 
-}
-
-.checbox-modalwindow:focus+.agriment-text-label::before {
-    outline: solid 1px var(--accent-color);
+    &::before {
+        display: inline-block;
+        content: "";
+        width: 15px;
+        height: 15px;
+        margin-right: 9px;
+        border: solid 2px var(--main-color-text);
+        border-radius: 4px;
+        cursor: pointer;
+        transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .checbox-modalwindow:checked + &::before {
+        background-color: var(--accent-color);
+        border: solid 1px var(--accent-color);
+        background-image: url(../images/svg/full-check.svg);
+        background-size: contain;
+        background-origin: border-box;
+    
+    }
+    .checbox-modalwindow:focus + &::before {
+        outline: solid 1px var(--accent-color);
+    }
 }
 
 .link-agriment {
     color: var(--accent-color);
-}
-
-.agriment-text-label::before {
-    display: inline-block;
-    content: "";
-    width: 15px;
-    height: 15px;
-    margin-right: 9px;
-    border: solid 2px var(--main-color-text);
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input:checked+.icon-checkbox {
-    background-color: var(--accent-color);
-    border: solid 2px var(--accent-color);
-    background-image: url(../images/svg/full-check.svg);
-    background-size: contain;
-    background-origin: border-box;
 }
