@@ -12,17 +12,17 @@
     margin-bottom: 50px;
 }
 
-.ul-second-section {
+.our-work {
     display: flex;
     justify-content: space-between;
 }
 
-.list-second-section {
+.our-work__list {
     flex-basis: calc((100% - 90px) / 3);
     position: relative;
 }
 
-.text-overlay {
+.our-work__title {
     position: absolute;
     bottom: 0;
     height: 70px;

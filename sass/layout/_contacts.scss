@@ -1,4 +1,4 @@
-.nav-contact-foot {
+.foot-address__contacts {
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -14,7 +14,7 @@
 
 }
 
-.addressfoot {
+.foot-address__address {
     font-family: 400;
     font-size: 14px;
     line-height: 1.71;
@@ -29,10 +29,10 @@
 
 }
 
-.list-foot {
+.foot-address__item {
     display: block;
 }
 
-.list .list-foot:not(:last-child) {
+.list .foot-address__item:not(:last-child) {
     margin-bottom: 9px;
 }

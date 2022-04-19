@@ -3,7 +3,7 @@
     padding-top: 12px;
 }
 
-.signtext {
+.signform__title {
     display: block;
     margin-bottom: 20px;
     font-weight: 700;
@@ -14,7 +14,7 @@
     color: var(--third-color-text);
 }
 
-.input-sign {
+.signform__emailinput {
     width: 358px;
     height: 50px;
     padding: 15px 16px;
@@ -47,7 +47,7 @@
     align-items: center;
 }
 
-.svg-sign {
+.sign-btn__icon {
     margin-left: 10px;
     fill: var(--third-color-text);
 }

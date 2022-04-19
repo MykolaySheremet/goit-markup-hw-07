@@ -1,14 +1,14 @@
-.list-buttons {
+.buttons-list {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-.list-buttons .items-button+.items-button {
+.buttons-list .buttons-list__items+.buttons-list__items {
     margin-left: 8px;
 }
 
-.button-port {
+.buttons-list__btn {
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
@@ -34,18 +34,18 @@
     }
 }
 
-.second-but {
+.buttons-list__btn--second {
     min-width: 128px;
 }
 
-.third-but {
+.buttons-list__btn--third {
     min-width: 145px;
 }
 
-.fourth-but {
+.buttons-list__btn--fourth {
     min-width: 103px;
 }
 
-.fifth-but {
+.buttons-list__btn--fifth {
     min-width: 130px;
 }
